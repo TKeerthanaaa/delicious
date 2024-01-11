@@ -51,6 +51,7 @@
   box-shadow: 0 1px 5px rgb(216, 195, 209);
   padding: 3px 8px;
   border-radius: 50%;
+  margin-bottom: 16px;
 }
 .form-box img {
   cursor: pointer;
@@ -58,11 +59,11 @@
   width: 100%;
 }
 
-.demo{
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-top: 1rem;
+.or {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 1rem;
 }
 
 @media (max-width: 550px) {

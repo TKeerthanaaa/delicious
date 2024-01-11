@@ -8,6 +8,7 @@ import {
   createUserDocumentFromAuth,
   signInAuthUserWithEmailAndPassword,
 } from "../firebase.js";
+import Demo from "./demo.jsx";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -96,6 +97,7 @@ const Login = () => {
             Login
           </button>
         </form>
+        <h2 className="or">Or</h2>
         <button
           className="icon-img"
           style={{ border: "none" }}
@@ -107,11 +109,8 @@ const Login = () => {
           />
         </button>
         <Link to="/signUp"> New User? Sign Up Here</Link>
-        <div className="demo">
-          <h3>View Demo Credentials</h3>
-          <p>sandysk0620@gmail.com</p>
-          <p>sk@0620</p>
-        </div>
+
+        <Demo />
       </div>
     </div>
   );
