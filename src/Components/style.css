@@ -45,15 +45,24 @@ body {
 .card {
   width: 180px;
   border-radius: 1rem;
-  background-color: #030e12;
+  background-color: #cc72a2;
   padding: 5px;
+  
 }
+
+
 img {
   width: 100%;
   border-radius: 1rem 1rem 0 0;
 }
+
+img:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
 .card h3 {
-  color: whitesmoke;
+  color: rgb(28, 25, 25);
   font-size: 18px;
 }
 .indexContainer {

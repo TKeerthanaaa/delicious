@@ -13,7 +13,7 @@ const Home = () => {
               alt="cook"
             />
             <button className="btn">
-              <a href="/recipe">View Recipe</a>
+              <a href="/recipe">Explore Now</a>
             </button>
           </div>
 
@@ -31,6 +31,31 @@ const Home = () => {
             You have no idea how excited I’m to try this dish!
           </h4>
         </div>
+      </div>
+      <div className="skills">
+        <section className="skill-image">
+          <img
+            src="https://img.freepik.com/premium-psd/tasty-food-recipe-book-still-life_23-2149150013.jpg"
+            alt=""
+          />
+        </section>
+        <section className="skill-content">
+          <h2>Improve your cooking skills</h2>
+          <ul>
+            <li>Equip yourself with the right tools</li>
+            <li>Get to know your ingredients</li>
+            <li>Learn basic cooking techniques</li>
+            <li> Practice, practice, practice!</li>
+          </ul>
+        </section>
+      </div>
+      <div className="recipe-quotes">
+        <h2>
+          <span>“</span>I learned to cook by watching and helping my mother in
+          the kitchen. I also learned by trial and error. Even though I’m big on
+          recipes, I love to make up my own dishes and when you take a risk in
+          the kitchen, you learn a lot about food! ~ Nina Dobrev
+        </h2>
       </div>
     </>
   );

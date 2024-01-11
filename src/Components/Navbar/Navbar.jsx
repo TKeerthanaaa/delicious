@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 // import { signOut } from "firebase/auth";
 // import { appAuth } from "/firebase";
 import { useNavigate } from "react-router-dom";
+import "../Navbar/navbar.css"
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -11,22 +12,23 @@ const Navbar = () => {
     navigate("/");
   };
   return (
-    <nav className="w-full px-4 shadow">
+    <nav className="navbar">
       <div className="container h-[5rem] flex item-center justify-between">
         <div>
-          <img
-            src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/cf1151125727469.611ebe5d877e4.jpg"
-            alt="logo"
-            className="w-[110px] h-auto object-contain"
-          />
+          <Link to="/">
+            <img
+              src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/cf1151125727469.611ebe5d877e4.jpg"
+              alt="logo"
+              className="w-[110px] h-auto object-contain"
+            />
+          </Link>
         </div>
-        <ul className="flex gap-8 items-center mx-[1rem]">
+        <ul className="flex gap-10 items-center mx-[10rem]">
           <li className="font-medium text-xl font-bold">
-            <a href="/">Home</a>
+            <Link to="/">HOME</Link>
           </li>
           <li className="font-medium text-xl font-bold">
-            {/* <Link to="/recipe">Recipe</Link> */}
-            <Link to="/recipe">Recipe</Link>
+            <Link to="/recipe">RECIPE</Link>
           </li>
         </ul>
         {/* <button onClick={() => signOut()}>Logout</button> */}

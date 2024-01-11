@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./login.css";
 import { useUser } from "../Context/Usercontext";
 import { Link, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
 import {
   signInWithGooglePopup,
   createUserDocumentFromAuth,
@@ -27,10 +28,7 @@ const Login = () => {
     setCpassword,
   } = useUser();
 
-  const { username, email, password, cpassword } = formFields;
-
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
+  const { email, password, cpassword } = formFields;
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -44,15 +42,14 @@ const Login = () => {
         );
         console.log({ user });
         setFormFields({ email: "", password: "", cpassword: "" });
-        if ({ user }) {
+        if (user) {
           setUser(user.email, user.username);
           navigate("/recipe");
-          // navigate("/cart");
           console.log(user.email);
           console.log(user.username);
         }
       } catch (err) {
-        console.log("Error Occurd while Login", err.message);
+        console.log("Error Occurred while Login", err.message);
         console.log(err.code);
         if (err.code === "auth/invalid-credential") {
           alert("Invalid Credentials");
@@ -68,6 +65,8 @@ const Login = () => {
 
   return (
     <div className="login-container">
+      <ToastContainer />
+
       <div className="form-box">
         <form action="" onSubmit={submitHandler}>
           <div className="input-box">
@@ -97,14 +96,22 @@ const Login = () => {
             Login
           </button>
         </form>
-        {/* <label className="label">Continue with Google</label> */}
         <button
           className="icon-img"
           style={{ border: "none" }}
           onClick={signInWithGoogle}
         >
-          <img src="../images/google.png" alt="" />
+          <img
+            src="https://banner2.cleanpng.com/20201008/rtv/transparent-google-suite-icon-google-icon-5f7f985ccd60e3.5687494416021975968412.jpg"
+            alt=""
+          />
         </button>
+        <Link to="/signUp"> New User? Sign Up Here</Link>
+        <div className="demo">
+          <h3>View Demo Credentials</h3>
+          <p>sandysk0620@gmail.com</p>
+          <p>sk@0620</p>
+        </div>
       </div>
     </div>
   );

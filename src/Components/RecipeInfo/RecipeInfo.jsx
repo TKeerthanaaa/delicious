@@ -27,7 +27,7 @@ const RecipeInfo = () => {
         "Loading.............."
       ) : (
         <>
-          <div className="content">
+          <div className="food-content">
             <img src={item.strMealThumb} alt="" />
             <div className="inner-content">
               <h1>{item.strMeal}</h1>
