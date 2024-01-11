@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import "../RecipeInfo/RecipeInfo.css"
 let vId = "";
 
 const RecipeInfo = () => {
@@ -23,7 +24,7 @@ const RecipeInfo = () => {
   return (
     <>
       {!item ? (
-        "Loading..."
+        "Loading.............."
       ) : (
         <>
           <div className="content">
