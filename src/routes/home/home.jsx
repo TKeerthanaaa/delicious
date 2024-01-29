@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.css";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -13,7 +14,7 @@ const Home = () => {
               alt="cook"
             />
             <button className="btn">
-              <a href="/recipe">Explore Now</a>
+              <Link to="/recipe">Explore Now</Link>
             </button>
           </div>
 
@@ -26,7 +27,11 @@ const Home = () => {
         </div>
 
         <div className="image">
-          <img className="img" src="src\assets\image\recepie-1.jpg" alt="" />
+          <img
+            className="img"
+            src="https://e0.pxfuel.com/wallpapers/281/550/desktop-wallpaper-advertising-background-stirfried-synthetic-creative-catering-stirfrystir-fried-creative-synthe-food-poster-food-poster-design-food-background-thumbnail.jpg"
+            alt=""
+          />
           <h4 className="content">
             You have no idea how excited I’m to try this dish!
           </h4>
@@ -35,7 +40,7 @@ const Home = () => {
       <div className="skills">
         <section className="skill-image">
           <img
-            src="https://img.freepik.com/premium-psd/tasty-food-recipe-book-still-life_23-2149150013.jpg"
+            src="https://dietdetective.com/wp-content/uploads/shutterstock_781081081-2.jpg"
             alt=""
           />
         </section>

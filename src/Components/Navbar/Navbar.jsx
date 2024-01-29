@@ -1,16 +1,8 @@
 import { Link } from "react-router-dom";
 import React, { useContext } from "react";
-// import { signOut } from "firebase/auth";
-// import { appAuth } from "/firebase";
-import { useNavigate } from "react-router-dom";
-import "../Navbar/navbar.css"
+import "../Navbar/navbar.css";
 
 const Navbar = () => {
-  const navigate = useNavigate();
-  const handleSignOut = () => {
-    localStorage.removeItem("userEmail");
-    navigate("/");
-  };
   return (
     <nav className="navbar">
       <div className="container h-[5rem] flex item-center justify-between">
@@ -19,7 +11,7 @@ const Navbar = () => {
             <img
               src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/cf1151125727469.611ebe5d877e4.jpg"
               alt="logo"
-              className="w-[110px] h-auto object-contain"
+              className="nav-logo"
             />
           </Link>
         </div>
@@ -31,8 +23,6 @@ const Navbar = () => {
             <Link to="/recipe">RECIPE</Link>
           </li>
         </ul>
-        {/* <button onClick={() => signOut()}>Logout</button> */}
-        <button onClick={handleSignOut}>Logout</button>
       </div>
     </nav>
   );

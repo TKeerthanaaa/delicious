@@ -24,7 +24,7 @@ const RecipeInfo = () => {
   return (
     <>
       {!item ? (
-        "Loading.............."
+        ""
       ) : (
         <>
           <div className="food-content">

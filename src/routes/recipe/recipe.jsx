@@ -4,8 +4,15 @@ import React from "react";
 
 import Meal from "../../Components/Meal.component";
 import RecipeInfo from "../../Components/RecipeInfo/RecipeInfo";
+import { useNavigate } from "react-router-dom";
+import "../recipe/recipe.css"
 
 const Recipe = () => {
+  const navigate = useNavigate();
+  const handleSignOut = () => {
+    localStorage.removeItem("userEmail");
+    navigate("/");
+  };
   return (
     <div>
       <Meal />
@@ -13,9 +20,15 @@ const Recipe = () => {
       {/* <Link to="/Meal/:MealId">
         <RecipeInfo />
       </Link> */}
+      <button className="book-logout" onClick={handleSignOut}>
+        Logout
+      </button>
       <RecipeInfo />
     </div>
   );
 };
 
 export default Recipe;
+
+
+

@@ -17,7 +17,7 @@ const Login = () => {
     const { user } = await signInWithGooglePopup();
     const userDocRef = await createUserDocumentFromAuth(user);
     setUser(user.email, user.username);
-    navigate("/recipes");
+    navigate("/recipe");
   };
   const {
     formFields,
